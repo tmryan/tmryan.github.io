@@ -173,6 +173,10 @@ img {
     font-size: 18px;
 }
 
+.brand-heading {
+    text-shadow: 2px 2px #000
+}
+
 @media(min-width:768px) {
     .intro {
         height: 100%;
@@ -186,6 +190,10 @@ img {
     .intro .intro-body .intro-text {
         font-size: 26px;
     }
+    
+    .brand-heading {
+        text-shadow: 2px 2px #000
+    }
 }
 
 .measurefriend-intro {    display: table;
@@ -195,6 +203,20 @@ img {
     text-align: center;
     color: #fff;
     background: url(../img/resume_bg2.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.coursework-intro {    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/sjsu_bg2.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -346,20 +368,22 @@ img {
     background: url(../img/mFriend_mainScreenBtn2.jpg) no-repeat center center scroll;
 }
 
-.measureFriend-main {
-    background: url(../img/mFriend_mainScreenBtn2.jpg) no-repeat center center scroll;
-}
-
-.measureFriend-menu {
-    background: url(../img/mFriend_menu.jpg) no-repeat center center scroll;
-}
-
-.measureFriend-conversion {
-    background: url(../img/mFriend_conversion.jpg) no-repeat center center scroll;
-}
-
 #measurefriend {
     padding-bottom: 50px;
+}
+
+.coursework {
+    background: url(../img/courseworkBtn1.jpg) no-repeat center center scroll;
+    width: 300px;
+    height: 300px;
+}
+
+.coursework:hover,
+.coursework:focus {
+    border: 1px solid #FFF;
+    outline: 0;
+    color: #000;
+    background: url(../img/courseworkBtn2.jpg) no-repeat center center scroll;
 }
 
 ul.banner-social-buttons {
@@ -420,4 +444,8 @@ hr {
     border: 0;
     height: 2px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .25), rgba(255, 255, 255, 0));
+}
+
+li {
+    margin: 0 0 10px 0;
 }
