@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thomas Ryan - Portfolio</title>
+    <title>Thomas Ryan - inQ</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -62,9 +62,9 @@
     <section id="inQEngine" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <p>I am passionate about games and I love solving problems, so it made sense to me that a game engine was the obvious choice for a large-ish summer coding project. It started off as a small UI test but the more I work on inQ, the more things I want to implement. I'm having a lot of fun learning and creating with this one. So, even though I need to focus on school this semester, I'll be back. I'm also working on getting a wiki up and running to document the project. I will update this page with a link as soon as I am able.</p>
-                 <p>The info below isn't an overview of the entire project, but it serves as a brief description of some of its systems. If you would like to see what was completed over the summer, please download the inQ_Test.zip from the inQ GitHub repository. If you value your time and would rather get it here instead, click the Demo button below.</p>
-                <p>Use the 'A' and 'D' keys to walk, and press the spacebar to jump.</p>
+                <p>I am passionate about games and I love solving problems, so it made sense to me that a game engine was the obvious choice for a large-ish summer coding project. It started off as a small UI test but the more I worked on inQ, the more things I wanted to implement. I've had a lot of fun learning and creating with this project. So, even though it's on hold for school, I'll be back.</p>
+                 <p>The info below isn't an overview of the entire project, but it serves as a brief description of some of its systems. If you would like to see some of what was completed over the summer, please download the inQ_Test.zip from the inQ GitHub repository. If you value your time and would rather get it here instead, click the Demo button below.</p>
+                <p>The demo consists of a level with dynamic and static scenery objects, a controllable character, a highlightable clicky, and a fading wall. Use the 'A' and 'D' keys to walk, and press the spacebar to jump.</p>
                 <a target="blank" href="https://github.com/tmryan/inQ/raw/master/inQ_Test.zip" class="btn btn-default btn-lg">inQ_Test Demo</a>
                 <p></br>If you'd like to see the code, check it out on GitHub.</p>
                 <a target="blank" href="https://github.com/tmryan/inQ" class="btn btn-default btn-lg"><i class="fa fa-github fa-2x"></i></a>
@@ -81,21 +81,21 @@
             <ul class="list-inline">
                 <p>GRAPHICS</p> 
                 <li><img src="./img/inq_graphics.jpg"></img></li>
-                <p></br>inQ currently uses Java and its AWT graphics API for rendering. The main graphics class extends a JFrame with repaint disabled so AWT and Swing will play nice. The graphics class also has a Canvas, with a double buffered BufferStrategy, which serves as the front and back buffer. At the start of each render call, a compatible BufferedImage is created and delegated to all of the inQ view components; this creates a composite image of the scene which is then clipped to the size of a camera object's viewport.</p>
-                <p>Right now there is a large bottleneck during render time. I am still investigating, but I think it might be transparency related. In the future I plan to implement some sort of threaded scene builder, procedurally split the scene and its actors up into tiles either in the editor or during load time, and implement the renderer using OpenGL instead of AWT.</p>
+                <p></br>inQ currently uses Java and its AWT graphics API for rendering. The main graphics class extends a JFrame with repaint disabled so AWT and Swing will play nice. The graphics class also has a Canvas, with a double buffered BufferStrategy, which serves as the front and back buffer. At the start of each render call, a compatible BufferedImage is created and drawing is delegated to all of the inQ view components; this creates a composite image of the scene which is then clipped to the size of a camera object's viewport.</p>
+                <p>Right now there is a large bottleneck during render time. After doing some research I found that Java's native graphics API might not be powerful enough for the sort of engine I would like to build (surprise!). I'm now working on an OpenGL based engine written in C++ in hopes that I can alleviate the problems inQ is experiencing with AWT.</p>
             </ul>
             <ul class="list-inline">
                 <p></br>PATHING & MOVERS</p>
                 <li><img src="./img/inq_pathingMap.jpg"></img></li>
                 <p></br>The pathing system in inQ is implemented with a matrix of pathing cells, with each cell having an enum signifying its pathing type. As collidable actors move through the game space, their mover system checks the scene state's pathing map to see if nearby cells allow that mover's pathing type. Movement involves a mover system which is attached to a moveable actor, and mover modules which can be attached to the moversystem. The current scene state issues movement commands (i.e. walk, jump, etc.) to the actor state which delegates to the mover system.</p>
-                <p>I think these systems could use some redesign, but right now the biggest problem is that jumping and jumping while moving don't function well. Once there is time, I'll implement some rules for maintaining the actor's current momentum while jumping and falling, and play around with designing a simple physics system. It's a big undertaking but it sounds like fun.</p>
+                <p>I think these systems could use some redesign, but right now the biggest problem is that jumping and jumping while moving don't function well. With the C++ and OpenGL engine is in the works, I think any redesign and problem solutions will likely end up in that version instead.</p>
 
             </ul>
             <ul class="list-inline">
                 <p><br>INTERACTIVE OBJECTS & GAME EVENTS</p>
                 <li><img src="./img/inq_clicky.jpg"></img></li>
                 <p></br>Interactive objects mainly consist of subclassed actor and actor state objects. They may have additional attributes such as fading and highlighting, both of which can be disabled, and can have a game event added to them using an attach method. Game events are the basic implementation of what will eventually become the scripting system, and currently come wrapped in one of two triggers: timed event and area trigger.</p>
-            <p>I'm kind of a sucker for modularity and I try my best to implement everything so that it can be customized up to an extent. For instance, you can create an interactive object with an attached trigger area, give it a game event that tells it to fade, then have a fading wall like the one in the inQ_Test program.</p>
+            <p>I'm kind of a sucker for abstraction and modularity. Thus, I try my best to implement everything so that it can be customized to some extent. For instance, you can create an interactive object with an attached trigger area, give it a game event that tells it to fade, then have a fading wall like the one in the inQ_Test program. I believe that designing and building with abstraction and scaling in mind can make additional features easier to implement in the future, like an editor. In reality it may not always be so simple, but I believe it's good to have an idealistic springboard to start from.</p>
             </ul>
         </div>
     </section>

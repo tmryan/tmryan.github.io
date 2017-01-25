@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thomas Ryan - Portfolio</title>
+    <title>Thomas Ryan - Super Clicky</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,13 +45,13 @@
     </nav>
 
     <!-- Intro Header -->
-    <header class="measurefriend-intro">
+    <header class="superClicky-intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">MeasureFriend</h1>
-                        <p class="intro-text">MeasureFriend is an Android app that easily converts from one common kitchen measurement to another.</p>
+                        <h1 class="brand-heading">Super Clicky</h1>
+                        <p class="intro-text">Super Clicky is a memory game prototype built with the inQ engine.</p>
                     </div>
                 </div>
             </div>
@@ -59,12 +59,14 @@
     </header>
 
     <!-- Project About Section -->
-    <section id="measurefriend" class="container content-section text-center">
+    <section id="superClicky" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <p>When cooking or baking, one frequently runs into the problem of needing to convert from one measurement to another. After repeatedly running to my computer so I could ask Google how many tablespoons there were in a cup, it was obviously time for another sort of technological intervention. Thus, MeasureFriend was born.</p>
+                <p>Players are presented with a glimpse of a game board at the beginning of each level followed by a shuffled board with the same number and color of tiles. The goal is to move the tiles back where you saw them. Right now there are only 7 levels and only a 3x3 game board. Each level has an increasing number of tiles from 3 to 9, with the position and color of the tiles being randomly generated.</p>
+                <p>Originally this was the SnapTo inventory test I made using Swing, but I figured it would be interesting to get it working using the code I wrote for inQ. There are a few modifications to the design of inQ and some game mode specific abstractions and logic, but much of the code is similar to the inQ engine project.</p>              
+                <p>I really want to fill the design out and finish implementation, but my final semester is going to require up more time than I can give it. So, I made a quick prototype over a few days and uploaded it to GitHub. The game is still a little rough, but it's more fun than I expected. Please check it out!</p>
                 <p>If you'd like to see the code, check it out on GitHub.</p>
-                <a target="blank" href="https://github.com/tmryan/MeasureFriend/tree/master/app/src/main/java/com/tmryan/measurefriend" class="btn btn-default btn-lg"><i class="fa fa-github fa-2x"></i></a>
+                <a target="blank" href="https://github.com/tmryan/SuperClicky" class="btn btn-default btn-lg"><i class="fa fa-github fa-2x"></i></a>
             </div>
         </div>
     </section>
@@ -75,9 +77,16 @@
     <section id="screenshots" class="container content-section text-center">
         <h2>Screenshots</h2>
         <ul class="list-inline">
-            <li><img src="./img/mFriend_mainScreen_v1_1.jpg"></img></li>
-            <li><img src="./img/mFriend_menu.jpg"></img></li>    
-            <li><img src="./img/mFriend_conversion_v1_1.jpg"></img></li>
+            <p>Hint at the beginning of a level</p> 
+            <li><img src="./img/superClicky1.jpg"></img></li>
+        </ul>
+        <ul class="list-inline">
+            <p><br/>Playable board</p>
+            <li><img src="./img/superClicky0.jpg"></img></li>    
+        </ul>  
+            <ul class="list-inline">
+            <p><br/>Level completion overlay</p>
+            <li><img src="./img/superClicky2.jpg"></img></li>
         </ul>
     </section>
 
