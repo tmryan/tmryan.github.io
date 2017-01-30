@@ -88,13 +88,13 @@
                 <p></br>PATHING & MOVERS</p>
                 <li><img src="./img/inq_pathingMap.jpg"></img></li>
                 <p></br>The pathing system in inQ is implemented with a matrix of pathing cells, with each cell having an enum signifying its pathing type. As collidable actors move through the game space, their mover system checks the scene state's pathing map to see if nearby cells allow that mover's pathing type. Movement involves a mover system which is attached to a moveable actor, and mover modules which can be attached to the moversystem. The current scene state issues movement commands (i.e. walk, jump, etc.) to the actor state which delegates to the mover system.</p>
-                <p>I think these systems could use some redesign, but right now the biggest problem is that jumping and jumping while moving don't function well. With the C++ and OpenGL engine is in the works, I think any redesign and problem solutions will likely end up in that version instead.</p>
+                <p>I think these systems could use some redesign, but right now the biggest problem is that jumping and jumping while moving don't function well. With the C++ and OpenGL engine in the works, I think any redesign and problem solutions will likely end up in that version instead.</p>
 
             </ul>
             <ul class="list-inline">
                 <p><br>INTERACTIVE OBJECTS & GAME EVENTS</p>
                 <li><img src="./img/inq_clicky.jpg"></img></li>
-                <p></br>Interactive objects mainly consist of subclassed actor and actor state objects. They may have additional attributes such as fading and highlighting, both of which can be disabled, and can have a game event added to them using an attach method. Game events are the basic implementation of what will eventually become the scripting system, and currently come wrapped in one of two triggers: timed event and area trigger.</p>
+                <p></br>Interactive objects mainly consist of subclassed actor and actor state objects. They may have additional attributes such as fading and highlighting, both of which can be disabled, and can have a game event added to them using an attach method. Game events are the basis of what will eventually become the scripting system, and currently come wrapped in one of two trigger objects: timed event and area trigger.</p>
             <p>I'm kind of a sucker for abstraction and modularity. Thus, I try my best to implement everything so that it can be customized to some extent. For instance, you can create an interactive object with an attached trigger area, give it a game event that tells it to fade, then have a fading wall like the one in the inQ_Test program. I believe that designing and building with abstraction and scaling in mind can make additional features easier to implement in the future, like an editor. In reality it may not always be so simple, but I believe it's good to have an idealistic springboard to start from.</p>
             </ul>
         </div>
