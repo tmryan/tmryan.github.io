@@ -237,6 +237,21 @@ img {
     -o-background-size: cover;
 }
 
+.marchingSquares-intro {    
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #f1f1f1;
+    background: url(../img/marchingSquares_bg1.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .coursework-intro {    
     display: table;
     width: 100%;
@@ -460,8 +475,26 @@ img {
     padding-bottom: 50px;
 }
 
+.marchingSquares {
+    background: url(../img/marchingSquaresBtn1.jpg) no-repeat center center scroll;
+    width: 300px;
+    height: 300px;
+}
+
+.marchingSquares:hover,
+.marchingSquares:focus {
+    border: 1px solid #CFE3FF;
+    outline: 0;
+    color: #000;
+    background: url(../img/marchingSquaresBtn2.jpg) no-repeat center center scroll;
+}
+
+#marchingSquares {
+    padding-bottom: 50px;
+}
+
 .coursework {
-    background: url(../img/courseworkBtn1.jpg) no-repeat center center scroll;
+    background: url(../img/algorithmsBtn1.jpg) no-repeat center center scroll;
     width: 300px;
     height: 300px;
 }
@@ -471,7 +504,7 @@ img {
     border: 1px solid #CFE3FF;
     outline: 0;
     color: #000;
-    background: url(../img/courseworkBtn2.jpg) no-repeat center center scroll;
+    background: url(../img/algorithmsBtn2.jpg) no-repeat center center scroll;
 }
 
 footer {
