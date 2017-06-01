@@ -267,6 +267,21 @@ img {
     -o-background-size: cover;
 }
 
+.clothSim-intro {    
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #f1f1f1;
+    background: url(../img/clothSim_intro.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .btn-circle {
     width: 70px;
     height: 70px;
@@ -493,6 +508,24 @@ img {
     padding-bottom: 50px;
 }
 
+.clothSim {
+    background: url(../img/clothSim_btn1.jpg) no-repeat center center scroll;
+    width: 300px;
+    height: 300px;
+}
+
+.clothSim:hover,
+.clothSim:focus {
+    border: 1px solid #CFE3FF;
+    outline: 0;
+    color: #000;
+    background: url(../img/clothSim_btn2.jpg) no-repeat center center scroll;
+}
+
+#clothSim {
+    padding-bottom: 50px;
+}
+
 .coursework {
     background: url(../img/algorithmsBtn1.jpg) no-repeat center center scroll;
     width: 300px;
@@ -505,6 +538,10 @@ img {
     outline: 0;
     color: #000;
     background: url(../img/algorithmsBtn2.jpg) no-repeat center center scroll;
+}
+
+#coursework {
+    padding-bottom: 50px;
 }
 
 footer {

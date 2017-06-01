@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Thomas Ryan - Cloth Simulation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html#projects">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Back</span>
+                </a>
+            </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="clothSim-intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Cloth Simulation</h1>
+                        <p class="intro-text">Mass-spring model cloth simulation with gravity, wind, and collision</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project About Section -->
+    <section id="clothSim" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p>This simulation uses a mass-spring model with each vertex representing a single point mass, or particle. The particles are arranged in a 2D matrix iterconnected by bending, structural, and shear springs. Springs are objects with two particle pointers and accelerations are calculated for the entire particle sheet before calculating each particle's movement using Verlet integration.</p>
+                <p>In order to prevent over and under extension of the springs, a variation of the Gauss-Seidel method was used. Since all computations were performed on the CPU without GPU aid, between 7 and 20 iterations were used in order to find a good balance between elasticity and frame rate. I believe the video below is using 7 iterations per frame on a 30x30 particle sheet.</p>
+                <p>If you'd like to see the code, check it out on GitHub.</p>
+                <a target="blank" href="https://github.com/tmryan/ClothSim" class="btn btn-default btn-lg"><i class="fa fa-github fa-2x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <!-- Project About Section -->
+    <section id="screenshots" class="container content-section text-center">
+        <h2>Screenshots</h2>
+        <ul class="list-inline">
+            <p>Cloth colliding with sphere</p> 
+            <li><img src="./img/clothSim1.jpg"></img></li>
+        </ul>
+        <br/>
+        <h2>Video</h2>
+        <ul class="list-inline">
+            <li><video width="480" height="480" preload controls>
+                    <source src="./vid/clothSim.mp4" type="video/mp4" />
+                </video>
+            </li>
+        </ul>
+    </section>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <ul class="list-inline">
+                <li><a target="blank" href="https://www.linkedin.com/in/tmryan3" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                <li><a target="blank" href="https://github.com/tmryan" class="btn btn-default btn-lg"><i class="fa fa-github fa-2x"></i></a></li>
+            </ul>
+            <p>Copyright &copy; Thomas Ryan 2016</p>
+            <p>based on Start Bootstrap - Grayscale</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
