@@ -297,6 +297,21 @@ img {
     -o-background-size: cover;
 }
 
+.colorPicker-intro {    
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #f1f1f1;
+    background: url(../img/colorPicker_bg.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .btn-circle {
     width: 70px;
     height: 70px;
@@ -556,6 +571,24 @@ img {
 }
 
 #unity {
+    padding-bottom: 50px;
+}
+
+.colorPicker {
+    background: url(../img/colorPicker_btn2.jpg) no-repeat center center scroll;
+    width: 300px;
+    height: 300px;
+}
+
+.colorPicker:hover,
+.colorPicker:focus {
+    border: 1px solid #CFE3FF;
+    outline: 0;
+    color: #000;
+    background: url(../img/colorPicker_btn1.jpg) no-repeat center center scroll;
+}
+
+#colorPicker {
     padding-bottom: 50px;
 }
 
